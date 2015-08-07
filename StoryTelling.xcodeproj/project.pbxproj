@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F09A2E11B6B7ABA00CF11D1 /* SavedStoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09A2E01B6B7ABA00CF11D1 /* SavedStoriesCollectionViewController.swift */; };
+		9F09A2E41B6B7BBC00CF11D1 /* SavedStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09A2E31B6B7BBC00CF11D1 /* SavedStoryCollectionViewCell.swift */; };
 		9F10D1361B57304B00BBD34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D1351B57304B00BBD34F /* AppDelegate.swift */; };
 		9F10D1381B57304B00BBD34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D1371B57304B00BBD34F /* ViewController.swift */; };
 		9F10D13B1B57304B00BBD34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F10D1391B57304B00BBD34F /* Main.storyboard */; };
 		9F10D13D1B57304B00BBD34F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F10D13C1B57304B00BBD34F /* Images.xcassets */; };
 		9F10D1401B57304B00BBD34F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F10D13E1B57304B00BBD34F /* LaunchScreen.xib */; };
 		9F10D14C1B57304B00BBD34F /* StoryTellingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D14B1B57304B00BBD34F /* StoryTellingTests.swift */; };
+		9F10D1581B5D9F1300BBD34F /* TypeStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D1571B5D9F1300BBD34F /* TypeStoryViewController.swift */; };
+		9F10D15A1B5DA90A00BBD34F /* ElementsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D1591B5DA90A00BBD34F /* ElementsScrollView.swift */; };
+		9F10D15C1B5F27D600BBD34F /* ElementImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D15B1B5F27D600BBD34F /* ElementImageView.swift */; };
+		9F10D15E1B60C73C00BBD34F /* VideoRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D15D1B60C73C00BBD34F /* VideoRecordingViewController.swift */; };
+		9F10D1641B60F55300BBD34F /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D1611B60F55300BBD34F /* UIImage+FixOrientation.m */; };
+		9F10D1651B60F55300BBD34F /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F10D1631B60F55300BBD34F /* LLSimpleCamera.m */; };
+		9F6037711B668164004BB71C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6037701B668164004BB71C /* Realm.framework */; };
+		9F6037721B668164004BB71C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6037701B668164004BB71C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F6037751B66817F004BB71C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6037741B66817F004BB71C /* RealmSwift.framework */; };
+		9F6037761B66817F004BB71C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6037741B66817F004BB71C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F88EB5C1B6685280030C617 /* StoryTellingRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88EB5B1B6685280030C617 /* StoryTellingRealm.swift */; };
+		9FA7476B1B666AA900E0B2DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7476A1B666AA900E0B2DE /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +39,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9F6037731B668164004BB71C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F6037761B66817F004BB71C /* RealmSwift.framework in Embed Frameworks */,
+				9F6037721B668164004BB71C /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9F09A2E01B6B7ABA00CF11D1 /* SavedStoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedStoriesCollectionViewController.swift; sourceTree = "<group>"; };
+		9F09A2E31B6B7BBC00CF11D1 /* SavedStoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F10D1301B57304B00BBD34F /* StoryTelling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryTelling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F10D1341B57304B00BBD34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F10D1351B57304B00BBD34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +67,20 @@
 		9F10D1451B57304B00BBD34F /* StoryTellingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryTellingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F10D14A1B57304B00BBD34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F10D14B1B57304B00BBD34F /* StoryTellingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTellingTests.swift; sourceTree = "<group>"; };
+		9F10D1571B5D9F1300BBD34F /* TypeStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeStoryViewController.swift; sourceTree = "<group>"; };
+		9F10D1591B5DA90A00BBD34F /* ElementsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementsScrollView.swift; sourceTree = "<group>"; };
+		9F10D15B1B5F27D600BBD34F /* ElementImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementImageView.swift; sourceTree = "<group>"; };
+		9F10D15D1B60C73C00BBD34F /* VideoRecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRecordingViewController.swift; sourceTree = "<group>"; };
+		9F10D15F1B60F55300BBD34F /* StoryTelling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryTelling-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F10D1601B60F55300BBD34F /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		9F10D1611B60F55300BBD34F /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		9F10D1621B60F55300BBD34F /* LLSimpleCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSimpleCamera.h; sourceTree = "<group>"; };
+		9F10D1631B60F55300BBD34F /* LLSimpleCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSimpleCamera.m; sourceTree = "<group>"; };
+		9F6037701B668164004BB71C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		9F6037741B66817F004BB71C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		9F88EB5B1B6685280030C617 /* StoryTellingRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTellingRealm.swift; sourceTree = "<group>"; };
+		9F88EB5E1B675FB30030C617 /* StoryTelling-Swift2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StoryTelling-Swift2.h"; sourceTree = "<group>"; };
+		9FA7476A1B666AA900E0B2DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6037751B66817F004BB71C /* RealmSwift.framework in Frameworks */,
+				9F6037711B668164004BB71C /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +103,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F09A2DF1B6B79F300CF11D1 /* Story Telling */ = {
+			isa = PBXGroup;
+			children = (
+				9F10D1371B57304B00BBD34F /* ViewController.swift */,
+				9F10D15D1B60C73C00BBD34F /* VideoRecordingViewController.swift */,
+				9F10D1571B5D9F1300BBD34F /* TypeStoryViewController.swift */,
+				9F10D1591B5DA90A00BBD34F /* ElementsScrollView.swift */,
+				9F10D15B1B5F27D600BBD34F /* ElementImageView.swift */,
+			);
+			name = "Story Telling";
+			sourceTree = "<group>";
+		};
+		9F09A2E21B6B7AC300CF11D1 /* Saved Stories */ = {
+			isa = PBXGroup;
+			children = (
+				9F09A2E01B6B7ABA00CF11D1 /* SavedStoriesCollectionViewController.swift */,
+				9F09A2E31B6B7BBC00CF11D1 /* SavedStoryCollectionViewCell.swift */,
+			);
+			name = "Saved Stories";
+			sourceTree = "<group>";
+		};
 		9F10D1271B57304B00BBD34F = {
 			isa = PBXGroup;
 			children = (
+				9F6037741B66817F004BB71C /* RealmSwift.framework */,
+				9F6037701B668164004BB71C /* Realm.framework */,
 				9F10D1321B57304B00BBD34F /* StoryTelling */,
 				9F10D1481B57304B00BBD34F /* StoryTellingTests */,
 				9F10D1311B57304B00BBD34F /* Products */,
@@ -78,11 +148,17 @@
 			isa = PBXGroup;
 			children = (
 				9F10D1351B57304B00BBD34F /* AppDelegate.swift */,
-				9F10D1371B57304B00BBD34F /* ViewController.swift */,
+				9FA7476A1B666AA900E0B2DE /* HomeViewController.swift */,
+				9F09A2DF1B6B79F300CF11D1 /* Story Telling */,
+				9F09A2E21B6B7AC300CF11D1 /* Saved Stories */,
+				9F88EB571B6684A80030C617 /* Realm */,
+				9F88EB5D1B67550C0030C617 /* LLSimpleCamera */,
 				9F10D1391B57304B00BBD34F /* Main.storyboard */,
 				9F10D13C1B57304B00BBD34F /* Images.xcassets */,
 				9F10D13E1B57304B00BBD34F /* LaunchScreen.xib */,
 				9F10D1331B57304B00BBD34F /* Supporting Files */,
+				9F10D15F1B60F55300BBD34F /* StoryTelling-Bridging-Header.h */,
+				9F88EB5E1B675FB30030C617 /* StoryTelling-Swift2.h */,
 			);
 			path = StoryTelling;
 			sourceTree = "<group>";
@@ -112,6 +188,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9F88EB571B6684A80030C617 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				9F88EB5B1B6685280030C617 /* StoryTellingRealm.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		9F88EB5D1B67550C0030C617 /* LLSimpleCamera */ = {
+			isa = PBXGroup;
+			children = (
+				9F10D1601B60F55300BBD34F /* UIImage+FixOrientation.h */,
+				9F10D1611B60F55300BBD34F /* UIImage+FixOrientation.m */,
+				9F10D1621B60F55300BBD34F /* LLSimpleCamera.h */,
+				9F10D1631B60F55300BBD34F /* LLSimpleCamera.m */,
+			);
+			name = LLSimpleCamera;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +217,8 @@
 				9F10D12C1B57304B00BBD34F /* Sources */,
 				9F10D12D1B57304B00BBD34F /* Frameworks */,
 				9F10D12E1B57304B00BBD34F /* Resources */,
+				9F6037731B668164004BB71C /* Embed Frameworks */,
+				9F6037771B668296004BB71C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -207,13 +304,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F6037771B668296004BB71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F10D12C1B57304B00BBD34F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F09A2E41B6B7BBC00CF11D1 /* SavedStoryCollectionViewCell.swift in Sources */,
+				9F10D15E1B60C73C00BBD34F /* VideoRecordingViewController.swift in Sources */,
+				9F88EB5C1B6685280030C617 /* StoryTellingRealm.swift in Sources */,
+				9F10D15C1B5F27D600BBD34F /* ElementImageView.swift in Sources */,
 				9F10D1381B57304B00BBD34F /* ViewController.swift in Sources */,
+				9F10D1641B60F55300BBD34F /* UIImage+FixOrientation.m in Sources */,
 				9F10D1361B57304B00BBD34F /* AppDelegate.swift in Sources */,
+				9FA7476B1B666AA900E0B2DE /* HomeViewController.swift in Sources */,
+				9F09A2E11B6B7ABA00CF11D1 /* SavedStoriesCollectionViewController.swift in Sources */,
+				9F10D15A1B5DA90A00BBD34F /* ElementsScrollView.swift in Sources */,
+				9F10D1651B60F55300BBD34F /* LLSimpleCamera.m in Sources */,
+				9F10D1581B5D9F1300BBD34F /* TypeStoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +465,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RealmSwift.framework",
+				);
 				INFOPLIST_FILE = StoryTelling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "StoryTelling/StoryTelling-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "StoryTelling-Swift2.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +485,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RealmSwift.framework",
+				);
 				INFOPLIST_FILE = StoryTelling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "StoryTelling/StoryTelling-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "StoryTelling-Swift2.h";
 			};
 			name = Release;
 		};
@@ -411,6 +553,7 @@
 				9F10D1511B57304B00BBD34F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F10D1521B57304B00BBD34F /* Build configuration list for PBXNativeTarget "StoryTellingTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +562,7 @@
 				9F10D1541B57304B00BBD34F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
