@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         self.backgroundImageView.image?.accessibilityIdentifier = "parkLandscapeBG"
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -115,6 +114,15 @@ class ViewController: UIViewController {
         }
         
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    @IBAction func backButtonTapped(sender: UIButton) {
+        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
+        {
+            self.saveSceneToRealm()
+        }
+        
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     override func viewDidLayoutSubviews() {
@@ -261,7 +269,7 @@ extension ViewController
             scene.videoUrl = ""
         }
         
-        print(self.elementsScrollView.elementsOnscreen.count)
+
         /*** Element ***/
         for elementOnScreen in self.elementsScrollView.elementsOnscreen
         {
@@ -296,16 +304,12 @@ extension ViewController
         {
             var storyTelling = realm.objects(StoryTelling).filter(predicate).first!
             
-            print("number of scenes = \(storyTelling.scenes.count)")
             
             for scene in storyTelling.scenes
             {
                 if scene.order == self.orderOfSceneInStory
                 {
                     self.showSavedScene(scene)
-                    
-                    print("came")
-                    
                     break
                 }
             }
@@ -328,9 +332,8 @@ extension ViewController
             self.videoUrl = NSURL(string: scene.videoUrl!)
         }
         
-        let elements = scene.elements
         
-        //print(scene.elements.count)
+        let elements = scene.elements
         
         for elementFromRealm in elements
         {

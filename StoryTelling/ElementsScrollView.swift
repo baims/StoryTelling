@@ -54,8 +54,6 @@ class ElementsScrollView: UIScrollView {
 
         // add it to the array
         elementsOnscreen.append(element)
-        
-        print(elementsOnscreen.count)
     }
 
 }
