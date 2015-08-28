@@ -28,11 +28,10 @@ class SavedStoriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.clearsSelectionOnViewWillAppear = true
         self.collectionView?.allowsMultipleSelection = true
-
+        //self.clearsSelectionOnViewWillAppear = true
        
-        let realm = Realm()
+        let realm = try! Realm()
         self.stories = realm.objects(StoryTelling).sorted("date", ascending: false)
         self.numberOfStories = self.stories.count
     }
@@ -40,6 +39,11 @@ class SavedStoriesCollectionViewController: UICollectionViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController!.navigationBar.hidden = false
         self.navigationController?.toolbarHidden        = false
+        
+        if self.collectionView?.indexPathsForSelectedItems()?.count > 0
+        {
+            self.collectionView?.deselectItemAtIndexPath((self.collectionView?.indexPathsForSelectedItems()!.first!)!, animated: true)
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -66,7 +70,7 @@ class SavedStoriesCollectionViewController: UICollectionViewController {
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
     {
         if identifier == "ShowSavedScene" && self.isEditingCollectionView == true
         {
@@ -114,7 +118,8 @@ extension SavedStoriesCollectionViewController
         
         let deleteAction = UIAlertAction(title: "مسح جميع القصص", style: UIAlertActionStyle.Destructive)
             { (action) -> Void in
-                let realm = Realm()
+                
+                let realm = try! Realm()
                 
                 realm.write {
                     realm.delete(realm.objects(StoryTelling))
@@ -135,23 +140,23 @@ extension SavedStoriesCollectionViewController
     
     @IBAction func deleteButtonTapped(sender: UIBarButtonItem)
     {
-        let alertController = UIAlertController(title: "تأكيد", message: "هل انت متأكد من مسح جميع القصص المحفوظة؟", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "تأكيد", message: "هل انت متأكد من مسح القصص التي اخترتها؟", preferredStyle: UIAlertControllerStyle.Alert)
         
         let cancelAction = UIAlertAction(title: "الغاء", style: .Cancel, handler: nil)
         
-        let deleteAction = UIAlertAction(title: "مسح جميع القصص", style: UIAlertActionStyle.Destructive)
+        let deleteAction = UIAlertAction(title: "مسح القصص المختارة", style: UIAlertActionStyle.Destructive)
             { (action) -> Void in
                 
                 var stories = [StoryTelling]()
                 
-                for indexPath in self.collectionView!.indexPathsForSelectedItems()
+                for indexPath in self.collectionView!.indexPathsForSelectedItems()!
                 {
-                    let cell = self.collectionView!.cellForItemAtIndexPath(indexPath as! NSIndexPath) as!SavedStoryCollectionViewCell
+                    let cell = self.collectionView!.cellForItemAtIndexPath(indexPath) as!SavedStoryCollectionViewCell
                     
                     stories.append(cell.storyTelling)
                 }
                 
-                let realm = Realm()
+                let realm = try! Realm()
                 
                 realm.write {
                     realm.delete(stories)

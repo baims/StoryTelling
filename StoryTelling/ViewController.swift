@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "NextScene"
         {
             if self.storyLabel.text?.isEmpty == true && self.videoUrl == nil
@@ -189,10 +189,8 @@ extension ViewController
             self.videoRecordingViewController.showVideoPreview(url)
         }
     
-        self.videoRecordingContainerView.hidden = false
-        
-        
         self.view.bringSubviewToFront(self.videoRecordingContainerView)
+        self.videoRecordingContainerView.hidden = false
     }
     
     func hideVideoRecordingContainerView()
@@ -215,7 +213,7 @@ extension ViewController
 {
     func saveSceneToRealm()
     {
-        let realm = Realm()
+        let realm = try! Realm()
         
         /*** Story Telling ***/
         var storyTelling = StoryTelling()
@@ -246,7 +244,7 @@ extension ViewController
             }
         }
         
-        var scene = Scene()
+        let scene = Scene()
         
         scene.order = self.orderOfSceneInStory
         scene.backgroundImageName = self.backgroundImageView.image?.accessibilityIdentifier
@@ -273,10 +271,10 @@ extension ViewController
         /*** Element ***/
         for elementOnScreen in self.elementsScrollView.elementsOnscreen
         {
-            var element = Element()
+            let element = Element()
             element.positionX = Float(elementOnScreen.frame.origin.x)
             element.positionY = Float(elementOnScreen.frame.origin.y)
-            element.imageName = elementOnScreen.image!.accessibilityIdentifier
+            element.imageName = elementOnScreen.image!.accessibilityIdentifier!
             
             scene.elements.append(element) // adding every Element to Scene
         }
@@ -295,14 +293,14 @@ extension ViewController
     
     func checkIfSceneIsSaved()
     {
-        let realm = Realm()
+        let realm = try! Realm()
         
         let predicate = NSPredicate(format: "date = %@", self.dateOfStory) // dateOfStory checking predicate
         
         
         if realm.objects(StoryTelling).filter(predicate).count == 1 // saved story
         {
-            var storyTelling = realm.objects(StoryTelling).filter(predicate).first!
+            let storyTelling = realm.objects(StoryTelling).filter(predicate).first!
             
             
             for scene in storyTelling.scenes

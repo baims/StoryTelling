@@ -16,23 +16,23 @@ class ElementImageView: UIImageView {
         super.init(frame: frame)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(image: UIImage!)
+    override init(image: UIImage?)
     {
         super.init(image: image)
         
         self.userInteractionEnabled = true // to allow dragging
 
         
-        var panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
+        let panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
         self.gestureRecognizers = [panRecognizer]
     }
     
     func detectPan(recognizer:UIPanGestureRecognizer) {
-        var translation  = recognizer.translationInView(self.superview!)
+        let translation  = recognizer.translationInView(self.superview!)
         
         var x = lastLocation.x + translation.x
         var y = lastLocation.y + translation.y
@@ -61,7 +61,7 @@ class ElementImageView: UIImageView {
         self.center = CGPointMake(x, y)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Promote the touched view
         self.superview?.bringSubviewToFront(self)
         
