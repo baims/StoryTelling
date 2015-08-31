@@ -27,6 +27,7 @@
 		9FCE22211B904EAB00485F4C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCE221E1B904EAB00485F4C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FCE22221B904EAB00485F4C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCE221F1B904EAB00485F4C /* RealmSwift.framework */; };
 		9FCE22231B904EAB00485F4C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCE221F1B904EAB00485F4C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FCE22251B93E7BB00485F4C /* shittyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE22241B93E7BB00485F4C /* shittyViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		9FA7476A1B666AA900E0B2DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FCE221E1B904EAB00485F4C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		9FCE221F1B904EAB00485F4C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		9FCE22241B93E7BB00485F4C /* shittyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shittyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				9F10D1351B57304B00BBD34F /* AppDelegate.swift */,
 				9FA7476A1B666AA900E0B2DE /* HomeViewController.swift */,
+				9FCE22241B93E7BB00485F4C /* shittyViewController.swift */,
 				9F09A2DF1B6B79F300CF11D1 /* Story Telling */,
 				9F09A2E21B6B7AC300CF11D1 /* Saved Stories */,
 				9F88EB571B6684A80030C617 /* Realm */,
@@ -318,6 +321,7 @@
 				9F10D1641B60F55300BBD34F /* UIImage+FixOrientation.m in Sources */,
 				9F10D1361B57304B00BBD34F /* AppDelegate.swift in Sources */,
 				9FA7476B1B666AA900E0B2DE /* HomeViewController.swift in Sources */,
+				9FCE22251B93E7BB00485F4C /* shittyViewController.swift in Sources */,
 				9F09A2E11B6B7ABA00CF11D1 /* SavedStoriesCollectionViewController.swift in Sources */,
 				9F10D15A1B5DA90A00BBD34F /* ElementsScrollView.swift in Sources */,
 				9F10D1651B60F55300BBD34F /* LLSimpleCamera.m in Sources */,
